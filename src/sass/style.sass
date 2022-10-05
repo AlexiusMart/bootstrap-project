@@ -1,3 +1,4 @@
+@import mixins
 @import colors
 
 *
@@ -75,6 +76,7 @@ nav
     border-radius: 4px
     color: $white
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    @include btn_hover_blue
 
 .promo
     min-height: 799px
@@ -124,6 +126,7 @@ nav
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
     border: none
     border-radius: 4px
+    @include btn_hover_blue
 
 .reasons
     min-height: 850px
@@ -222,6 +225,26 @@ nav
         align-items: center
         position: absolute
         cursor: pointer
+        &:before
+            content: ''
+            display: block
+            height: 2px
+            width: 14px
+            background-color: $blue
+            transition: 0.25s all
+        &:after
+            content: ''
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+            height: 14px
+            width: 2px
+            background-color: $blue
+            transition: 0.25s all
+        &:hover
+            &:before, &:after
+                background-color: red
 
 .choice
     position: relative
@@ -237,13 +260,18 @@ nav
         background-color: #070716
         z-index: 1
     &_undertitle
+        position: relative
         background-color: $white
         color: $black
+        z-index: 2
     &_title
+        position: relative
         color: $white
         z-index: 2
     &_subtitle
+        position: relative
         color: $white
+        z-index: 2
     &_text
         text-align: center
         font-weight: 300
@@ -255,3 +283,14 @@ nav
         display: block
         margin: 54px auto 0 auto
         z-index: 2
+.required
+    min-height: 920px
+    padding: 68px 0 87px 0
+    .required-block
+        margin-top: 33px
+    .required_title
+        font-weight: 400
+        font-size: 22px
+        line-height: 24px
+        align-items: center
+        color: #1CA8C3
