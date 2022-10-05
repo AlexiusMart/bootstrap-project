@@ -284,13 +284,71 @@ nav
         margin: 54px auto 0 auto
         z-index: 2
 .required
-    min-height: 920px
-    padding: 68px 0 87px 0
+    padding: 68px 0 27px 0
     .required-block
         margin-top: 33px
+        margin-right: 33px
+    .required-item
+        margin-bottom: 60px
     .required_title
+        margin-bottom: 16px
         font-weight: 400
         font-size: 22px
         line-height: 24px
         align-items: center
         color: #1CA8C3
+    .required_list_description
+        font-weight: 300
+        font-size: 17px
+        align-items: center
+        color: #1CA8C3
+    .required-title__red
+        color: #FF5656
+    .required-list
+        position: relative
+        list-style-type: none
+        font-weight: 300
+        font-size: 17px
+        line-height: 24px
+        color: #222222
+        padding-left: 50px
+        li
+            margin-bottom: 8px
+        li:before
+            content: ''
+            display: block
+            position: absolute
+            width: 21px
+            height: 20px
+            transform: translate(-30px, 1px)
+            background-image: url(../icons/Rectangle-blue.png)
+    .required-list__red
+        li:before
+            content: ''
+            background-image: url(../icons/Layer-red.png)
+
+.map
+    position: relative
+    padding: 46px 0 21px 0
+    min-height: 720px
+    background: url(../img/world_bg.png) center no-repeat
+    background-color: #080816
+    &_link
+        display: flex
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        margin-bottom: 21px
+        a
+            text-decoration: none
+            font-weight: 400
+            font-size: 15px
+            text-transform: uppercase
+            color: #1FBAD6
+
+.footer
+    position: relative
+    min-height: 155px
+    &_block
+        position: absolute
