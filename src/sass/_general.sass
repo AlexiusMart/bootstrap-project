@@ -1,5 +1,7 @@
 header
     position: relative
+.hamburger
+    display: none
 
 nav
     height: 53px
@@ -281,26 +283,26 @@ nav
         z-index: 2
 .required
     padding: 68px 0 27px 0
-    .required-block
+    &-block
         margin-top: 33px
         margin-right: 33px
-    .required-item
+    &-item
         margin-bottom: 60px
-    .required_title
+    &_title
         margin-bottom: 16px
         font-weight: 400
         font-size: 22px
         line-height: 24px
         align-items: center
         color: #1CA8C3
-    .required_list_description
+    &_list_description
         font-weight: 300
         font-size: 17px
         align-items: center
         color: #1CA8C3
-    .required-title__red
+    &-title__red
         color: #FF5656
-    .required-list
+    &-list
         position: relative
         list-style-type: none
         font-weight: 300
@@ -318,7 +320,7 @@ nav
             height: 20px
             transform: translate(-30px, 1px)
             background-image: url(../icons/Rectangle-blue.png)
-    .required-list__red
+    &-list__red
         li:before
             content: ''
             background-image: url(../icons/Layer-red.png)
