@@ -1,6 +1,6 @@
-const gulp        = require('gulp');
+const gulp = require('gulp');
 const browserSync = require('browser-sync');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -31,12 +31,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/sass/*.+(scss|sass)", gulp.parallel("styles"))
-    gulp.watch("src/*.html", on("change", browserSync.reload))
+    gulp.watch("src/sass/*.+(scss|sass)", gulp.parallel("styles"));
+    gulp.watch("src/*.html").on("change", browserSync.reload);
 });
 
 gulp.task('rename', function() {
 
-})
+});
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
